@@ -15,7 +15,7 @@ int main(){
 	do{
 		cin >> moji[j];
 		j++;
-	}while(moji[j-1] != '#');
+	}while(moji[j-1] != '#');//「＃」が入力されるまで文字を格納し続ける。
 	j=0;
 	cout << "あなたの入力した文字は「";
 	while(moji[j] != '#'){
