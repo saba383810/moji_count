@@ -2,15 +2,16 @@
 #include<unistd.h>
 #include<string>
 using namespace std;
-
+int AsciiArt();
 int main(){
 	
 	char eiji[26] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
-	char moji[30];
+	char moji[100];
 	int  cnt [26];
 	int i,j;
 	int wait = 1;
 	string ans;
+	AsciiArt();
 	do{
 	//初期化
 	for(j=0;j<26;j++) cnt[j] = 0;
@@ -29,9 +30,11 @@ int main(){
 	}
 	cout << "」ですね。" << endl;
 	i = 0;
+	do{
 	cout << "この文字でお調べいたします。よろしいですか？(yes/no)" << endl;
 	cin >> ans;
-	}while(ans != "yes");
+	}while(ans != "yes" && ans != "no" && ans != "y" && ans != "n");
+	}while(ans != "yes" && ans != "y");
 	while(moji[i] != '#'){
 		j = 0;
 		while(moji[i] != eiji[j]) j++;//同じ文字が見つかるまでインクリメント
@@ -53,4 +56,42 @@ int main(){
 	}
 	cout << "文字は昇順に並べておきました！" << endl;
 	cout << "ご利用ありがとうございます！" << endl;
+}
+int AsciiArt(void){
+
+	cout << " ■                                     ■ " <<endl;
+	cout << " ■                                  ■   ■" <<endl;
+	cout << "■                   ■    ■        ■■    ■" <<endl;
+	cout << "■        ■         ■■    ■      ■■      ■" <<endl;
+	cout << "■        ■         ■  ■  ■■   ■■        ■" <<endl;
+	cout << "■                 ■■  ■  ■■   ■■        ■" <<endl;
+	cout << "■                 ■   ■  ■■     ■■      ■" <<endl;
+	cout << "■                 ■■ ■■  ■         ■■   ■ " <<endl;
+	cout << " ■                 ■■  ■■              ■■" <<endl;
+	cout << "                  ■" <<endl;
+	cout << "     ■            ■           ■■            ■                        ■                   " <<endl;
+	cout << "     ■       ■■■■■■■■■■■      ■■            ■        ■■              ■" <<endl;
+	cout << "■■■■■■■■■■■  ■         ■      ■■■■■■    ■■■■■■■■■     ■■             ■           ■■" <<endl;
+	cout << "  ■    ■■    ■ ■■■■■■■ ■   ■■■■    ■    ■      ■■      ■     ■       ■          ■■ ■" <<endl;
+	cout << "   ■   ■           ■■         ■    ■    ■      ■■           ■■       ■■■       ■■   ■" <<endl;
+	cout << "   ■   ■          ■           ■   ■■    ■      ■           ■■        ■ ■■■    ■■     ■■" <<endl;
+	cout << "    ■ ■      ■■■■■■■■■■■      ■   ■■           ■          ■■         ■   ■    ■       ■■" <<endl;
+	cout << "     ■■           ■          ■    ■■          ■          ■■          ■                  ■" <<endl;
+	cout << "    ■■■■          ■         ■■    ■          ■         ■■■           ■" <<endl;
+	cout << "  ■■   ■■■        ■        ■■   ■■■        ■■         ■              ■" <<endl;
+	cout << " ■■   ■■■        ■        ■■   ■■■        ■■         ■              ■" <<endl;
+	cout << "■■       ■■     ■■■" <<endl;
+	cout << "" <<endl;
+	cout << "     ■           ■■■                       ■■■■          ■" <<endl;
+	cout << "     ■             ■        ■■■■■■■      ■■  ■■          ■" <<endl;
+	cout << "     ■ ■■                       ■           ■■           ■" <<endl;
+	cout << "     ■■        ■■■■■■          ■           ■■            ■" <<endl;
+	cout << "     ■         ■    ■■                   ■■■■■■■■        ■" <<endl;
+	cout << "     ■               ■                  ■   ■            ■" <<endl;
+	cout << "     ■               ■      ■              ■             ■" <<endl;
+	cout << " ■■■■■■             ■■     ■               ■" <<endl;
+	cout << " ■   ■ ■■          ■■       ■              ■" <<endl;
+	cout << " ■■■■            ■■■         ■■■■■■■        ■■■■         ■" <<endl;
+	cout << "" <<endl;
+	return 0;
 }
