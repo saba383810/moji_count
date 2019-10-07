@@ -5,9 +5,9 @@ using namespace std;
 int AsciiArt();
 int main(){
 	
-	char eiji[26] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+	char eiji[] = "abcdefghijklmnopqrstuvwxyz";
 	char moji[100];
-	int  cnt [26];
+	int  cnt [30];
 	int i,j;
 	int wait = 1;
 	string ans;
